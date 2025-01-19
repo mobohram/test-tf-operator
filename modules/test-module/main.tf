@@ -9,6 +9,14 @@ resource "random_string" "test_string" {
   numeric          = true
 }
 
+resource "random_string" "test_string2" {
+  length           = 12
+  special          = true
+  upper            = true
+  lower            = true
+  numeric          = true
+}
+
 output "generated_string" {
   value = random_string.test_string.result
 }
